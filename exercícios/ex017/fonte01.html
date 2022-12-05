@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+            /* 
+            Medidas absolutas
+            as medidas absolutas são:
+            cm, mm, in, px, pt, pc
+            - cm: centímetro
+            - mm: milímetro
+            - in: polegada
+            - px: pixel
+            - pt: ponto
+            - pc: paica
+
+            Medidas relativas
+            as medidas realtivas são: 
+            em, ex, rem, vw, vh, %
+            - em: medida relativas ao tamanho atual da fonte
+            - ex: que é relativo a altura x de uma fonte
+            - rem: relativo a fonte que esta configurada no body
+            - vw: largura da viewport
+            - vh: que é a altura da viewport
+            - %: porcentagem 
+
+            ------------------------
+            obs01: é recomendado usar somente px e em
+            ------------------------
+
+            obs02: 16px = 1em
+
+            2em = 32px
+            ...
+            então, a cada 1em ele vai fazer exatamente o dobro de 16px
+            */
+            font-size: 1em;
+
+        }
+        h1 {
+            /* 
+            shorthand font
+            a ordem é sempre essa: font-style -> font-weight -> font-size -> font-family
+            
+            font-family: 'Work Sans', sans serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic; 
+            */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum asperiores hic autem consectetur neque, soluta corrupti. Id facere, non reprehenderit sapiente eveniet, alias totam architecto nam similique vero, esse iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta, corrupti ullam quisquam obcaecati sed animi voluptatibus voluptatem labore consequatur optio, necessitatibus nihil incidunt accusamus distinctio voluptates repellat minus vero!</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet temporibus nisi minima magnam fuga consequuntur veniam alias suscipit dolor autem delectus tempore reprehenderit ut fugiat, dignissimos incidunt similique natus sunt.</p>
+</body>
+</html>
