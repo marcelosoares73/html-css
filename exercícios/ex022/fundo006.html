@@ -4,30 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
         body {
             height: 100vh;
-            background-color: #000000;
+            /* background-color: #000000;
             background-image: url('imagens/wallpaper002.jpg');
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: contain;
+            background-size: cover;
+            background-attachment: fixed; */
+
+            /* 
+            Shorthand - background
+            color > image > position > repeat > [size] > attachment
+
+            obs: o background-size pode não funcionar na shorthand, então devo colocar ele separado.
+            */
+
+            background: #000000 url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 700px;
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
             border-radius: 10px;
+        }
+
+        main p {
+            text-indent: 20px;
+            text-align: justify;
+            line-height: 1.5em;
         }
     </style>
 </head>
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit. Voluptate quod perferendis harum, perspiciatis corrupti provident. Aliquid quis nam odio reprehenderit, eveniet necessitatibus, maiores quam obcaecati quaerat explicabo sunt.
+        Accusamus, ducimus, repellat at consequuntur perferendis iste, fugit nihil suscipit molestias omnis reiciendis quae perspiciatis. Aspernatur, quis. Quaerat quibusdam, animi temporibus quas possimus omnis illum, expedita neque molestias provident facere.
+        Placeat esse illum maiores. Dolore suscipit, saepe culpa possimus ab corrupti expedita quidem nam minima consequuntur sunt, qui unde quae inventore, nostrum laboriosam! Aspernatur, quidem magnam. Modi consequatur pariatur totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit. Voluptate quod perferendis harum, perspiciatis corrupti provident. Aliquid quis nam odio reprehenderit, eveniet necessitatibus, maiores quam obcaecati quaerat explicabo sunt.
+        Accusamus, ducimus, repellat at consequuntur perferendis iste, fugit nihil suscipit molestias omnis reiciendis quae perspiciatis. Aspernatur, quis. Quaerat quibusdam, animi temporibus quas possimus omnis illum, expedita neque molestias provident facere.
+        Placeat esse illum maiores. Dolore suscipit, saepe culpa possimus ab corrupti expedita quidem nam minima consequuntur sunt, qui unde quae inventore, nostrum laboriosam! Aspernatur, quidem magnam. Modi consequatur pariatur totam.</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, reprehenderit. Voluptate quod perferendis harum, perspiciatis corrupti provident. Aliquid quis nam odio reprehenderit, eveniet necessitatibus, maiores quam obcaecati quaerat explicabo sunt.
         Accusamus, ducimus, repellat at consequuntur perferendis iste, fugit nihil suscipit molestias omnis reiciendis quae perspiciatis. Aspernatur, quis. Quaerat quibusdam, animi temporibus quas possimus omnis illum, expedita neque molestias provident facere.
         Placeat esse illum maiores. Dolore suscipit, saepe culpa possimus ab corrupti expedita quidem nam minima consequuntur sunt, qui unde quae inventore, nostrum laboriosam! Aspernatur, quidem magnam. Modi consequatur pariatur totam.</p>
