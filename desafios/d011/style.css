@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+/* font-family: 'Passion One', cursive; */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: #000000;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+    padding: 50px;
+
+}
+
+header h1 {
+    font-family: 'Passion One', cursive;
+    color: #ffffff;
+    font-size: 4em;
+}
+
+header p {
+    color: #ffffff;
+}
+
+header a {
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+header a:hover {
+    text-decoration: underline #ffffff;
+}
+
+main article section p {
+    font-size: 1.5em;
+}
+
+article {
+    margin: 20px;
+}
+
