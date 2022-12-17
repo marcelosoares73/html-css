@@ -2,9 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
  
-
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
 
 * {
     padding: 0px;
@@ -13,171 +17,86 @@
 
 html, body {
     min-height: 100vh;
-    background-color: lightgray;
+    background-color: #d3d3d3;
+    font-family: var(--fonte1);
 }
 
 header {
     background-color: black;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 40px;
 }
 
-header h1 {
+header > h1 {
     font-variant: small-caps;
-    font-family: 'Passion One', cursive;
-    font-size: 4.5em;
+    font-family: var(--fonte2);
+    font-size: 10vw;
 }
 
-header p {
-    font-size: 1.5em;
+header > p {
     margin-top: 10px;
 }
 
 a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
-}
-
-a:hover {
-    text-decoration: underline white;
-}
-
-section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
-    font-family: 'Sriracha', cursive; 
-}
-
-.normal {
-    background-color: white;
-    color: black;
-    font-size: 2em;
-}
-
-.imagem1 > p {
-    background-color: #8080803f;
-    width: 400px;
-    font-size: 2em;
-}
-
-.imagem2 > p {
-    background-color: #8080803f;
-    width: 400px;
-    color: black;
-    font-size: 2em;
-}
-
-.imagem1 {
-    background-image: url('imagens/background001.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    color: white;
-}
-
-.imagem2 {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    background-image: url('imagens/background002.jpg');
-    color: white;
-    
-}
-
-footer {
-    color: white;
-    background-color: black;
-    text-align: center;
-    padding: 10px;
-}
-
-
-
-/* @charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-font-family: 'Passion One', cursive; 
-
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-font-family: 'Sriracha', cursive; 
-
-* {
-    padding: 0px;
-    margin: 0px;
-}
-
-header {
-    background-image: linear-gradient(to right, #00032b, black);
-    text-align: center;
-    margin: 0px 0px 30px 0px;
-    padding: 50px;
-}
-
-header h1 {
-    font-family: 'Passion One', cursive;
-    color: #ffffff;
-    font-size: 4em;
-}
-
-header p {
-    color: #ffffff;
-}
-
-header a {
-    color: #ffffff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 700;
-    text-decoration: none;
 }
 
 header a:hover {
     text-decoration: underline #ffffff;
 }
 
-main {
-    padding: 30px;
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 40px;
+    font-family: var(--fonte3);
+    font-size: 5vw;
 }
 
-main section p {
-    font-family: 'Sriracha', cursive;
-    margin: 20px 0px 20px 0px;
-    font-size: 1.5em;
-    padding: 25px;
+section > p {
+    padding-bottom: 2em;
 }
 
-.image1 {
+section.normal {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+section.imagem > p {
+    background-color: #0000005d;
+    padding: 8px;
+    display: inline-block;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+section.imagem {
+    background-color: #00000093;
+    color: #ffffff;
+    box-shadow: inset 6px 6px 13px 0px #0000006e;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#image1 {
     background-image: url('imagens/background001.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    max-width: 100%;
+    background-position: right center;
 }
 
-.image2 {
+#image2 {
     background-image: url('imagens/background002.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 300px;
-    max-width: 100%;
 }
 
 footer {
-    background-image: linear-gradient(to right, #00032b, #000000);
     color: #ffffff;
-    margin: 20px 0px 10px 0px;
-    padding: 10px;
+    background-color: #000000;
     text-align: center;
+    padding: 10px;
 }
 
-footer a {
-    text-decoration: none;
-    color: #ffffff;
-}
 footer a:hover {
     text-decoration: underline #ffffff;
-}*/
+}
