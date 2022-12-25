@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 2</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            margin: auto;
+        }
+
+        td, th {
+            border: 1px solid black;
+            text-align: center;
+        } 
+
+        th {
+            background-image: linear-gradient(to top, yellow, rgb(179, 118, 7));
+        }
+
+        td {
+            background-image: linear-gradient(to top, red, orange);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="4">A</th>
+            <th rowspan="4">B</th>
+        </tr>
+        <tr>
+            <th rowspan="4">C</th>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <th colspan="4">N</th>
+        </tr>
+    </table>
+</body>
+</html>

@@ -12,11 +12,17 @@
         table {
             border-collapse: collapse;
             width: 500px;
-            
+            position: relative;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: black;
         }
 
         thead th {
-            background-color: gray;
+            background-color: black;
             color: white;
         }
 
@@ -24,14 +30,30 @@
             border: 1px solid black;
             text-align: center;
         }
+
+        caption {
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+
+        tfoot {
+            background-color: darkgray;
+            color: red;
+        }
     </style>
     <title>Tabelas</title>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- 
-        ANATOMIA PARA TABELAS GRNADES 
+        ANATOMIA PARA TABELAS GRANDES 
         TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -41,10 +63,11 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
 
@@ -160,9 +183,19 @@
         </tbody>
 
         <tfoot>
-            <td><strong>Total</strong></td>
+            <th scope="row"><strong>Total de Habitantes</strong></th>
             <td><strong>00000</strong></td>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit maiores eveniet natus aspernatur expedita qui pariatur, ab odio voluptatibus ullam velit libero doloremque eius cumque animi nesciunt nam nemo! Asperiores!
+    Est dicta modi optio numquam deserunt reprehenderit magni saepe aliquid delectus repellat quae quia, sint odio doloremque quasi eos vel soluta quibusdam sapiente! Dolorum, corporis dicta! Velit laboriosam voluptas minus!
+    Veritatis voluptate provident temporibus porro nulla animi distinctio labore sit aut magni. Dicta, velit voluptatibus debitis sequi dolore voluptates! Fuga officiis ipsum, delectus accusantium voluptas quidem eaque laboriosam provident recusandae.
+    Impedit sapiente eligendi, fuga rem dignissimos saepe aspernatur? Fugiat eius aperiam laborum culpa soluta eos velit, accusantium quas ut itaque ab rerum, repellat est numquam quidem ducimus distinctio alias dolore!
+    Provident aspernatur doloribus omnis voluptate velit, quia blanditiis at ratione voluptas nisi, dolor officia aut ab quibusdam! Hic quia consequatur, qui eaque eum consequuntur ratione eligendi praesentium, dolorum molestiae odit.
+    Tenetur voluptas necessitatibus, totam quo, consequuntur explicabo nobis est delectus quos odio culpa libero nisi ex corrupti possimus reiciendis laborum, rerum alias dolores neque. Nostrum ipsum exercitationem est deleniti laboriosam.
+    Nemo, quia culpa optio illum veritatis mollitia recusandae sit corrupti nostrum beatae minima, impedit, temporibus repellendus doloremque voluptatem iure ea. Omnis qui expedita, amet doloribus nulla obcaecati iure corrupti ut!
+    Mollitia porro reiciendis enim necessitatibus tempora? Nesciunt doloribus debitis quae, eveniet possimus quibusdam fugit delectus doloremque similique hic, vero assumenda, dignissimos labore dolor. Mollitia praesentium vel deleniti beatae in delectus.
+    Saepe voluptatibus, dicta similique nesciunt aperiam ipsam fugit, ea dolor minima aut perferendis cumque hic officia pariatur corrupti minus quae? Aliquid, similique voluptatibus deleniti deserunt vel architecto cumque magnam odit?
+    Fuga quos perferendis voluptas, commodi recusandae voluptatum iusto distinctio! Placeat maiores, vel nulla molestias provident nihil porro deserunt, eligendi illum suscipit, nam magnam excepturi odio voluptatem iusto est harum debitis.</p>
 </body>
 </html>
