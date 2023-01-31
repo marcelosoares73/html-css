@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="#" method="get" autocomplete="on">
+        <p>
+            <label for="i-n1">Número 1: </label>
+            <input type="number" name="n1" id="i-n1" required min="1" max="100">
+        </p>
+        <p>
+            <label for="i-n2">Número 2: </label>
+            <input type="number" name="n2" id="i-n2" required min="1" max="10">
+        </p>
+        <p>
+            <label for="i-soma">Soma: </label>
+            <output id="i-soma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <script>
+        document.getElementById(i-n1)
+        document.getElementById(i-n2)
+        document.getElementById(i-soma)
+        var n1 = Number(i-n1.value)
+        var n2 = Number(i-n2.value)
+        var soma = Number(i-soma.value)
+    </script>
+</body>
+</html>

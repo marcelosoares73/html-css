@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 100vh;
+            font-size: 1.1em;
+        }
+
+        h1 {
+            margin: 0px 0px 30px 0px;
+        }
+
+        div.main {
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 5px;
+            width: 420px;
+        }
+
+        .inp {
+            margin: 10px 0px 10px 0px;
+            background: none;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.1em;
+            font-weight: 200;
+            text-indent: 5px;
+            padding: 3px;
+            border-radius: 4px;
+            border: 1px solid rgb(38, 38, 38);
+            color: rgb(255, 255, 255);
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .inp:focus {
+            border: 1px solid rgb(50, 94, 236);
+            box-shadow: 0px 0px 5px rgba(4, 79, 165, 0.342);
+        }
+
+        .botao {
+            width: 100%;
+            padding: 5px;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+            background-color: rgb(4, 79, 165);
+            font-size: 1em;
+            cursor: pointer;
+            border: 1px solid rgb(50, 94, 236);
+            margin: 10px 0px 10px 0px;
+        }
+
+        .botao:hover {
+            background-color: rgb(35, 94, 161);
+            border: 1px solid rgb(50, 94, 236);
+            box-sizing: border-box;
+        }
+
+        .botao:active {
+            background-color: rgb(5, 56, 116);
+        }
+
+        ::placeholder {
+            font-style: italic;
+            font-size: 0.7em;
+            color: rgb(88, 88, 88);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>djfhdkjhfkdjhfjhfkjd</h1>
+        <form action="cadastro.php" method="post" autocomplete="off">
+            <div class="input-nome">
+                <label for="i-nome">Nome Completo</label> <br>
+                <input type="text" name="nome" id="i-nome" class="inp" placeholder="José Maria da Silva" required>
+            </div>
+
+            <div class="input-email">
+                <label for="i-email">E-mail</label> <br>
+                <input type="email" name="email" id="i-email" class="inp" placeholder="exemplo@gmail.com" required>
+            </div>
+
+            <div class="input-telefone">
+                <label for="i-tel">Telefone</label> <br>
+                <input type="tel" name="telefone" id="i-tel" class="inp" placeholder="(xx) xxxxx-xxxx" pattern="[0-9]{2} [0-9]{4,5}-[0-9]{4}">
+            </div>
+
+            <div class="input-senha">
+                <label for="i-senha">Criar senha</label>
+                <input type="password" name="senha" id="i-senha" class="inp" placeholder="Digite sua senha" required minlength="8">
+                <span class="eye"></span>
+            </div>
+
+            <div >
+                <input type="submit" value="Concluir cadastro" class="botao">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            margin: 15px 0px 15px 0px;
+            line-height: 1.5em;
+        }
+
+        div.dados-pessoais {
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        main {
+            padding: 20px;
+            margin: auto;
+            max-width: 700px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Formulário de Cadastro</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <div class="dados-pessoais">
+                <fieldset class="field01">
+                    <legend>Dados Pessoais</legend>
+                    <div>
+                        <label for="i-sexo">Sexo</label> <br>
+                        <input type="radio" name="sexo" id="i-sexo" value="M"> Masculino
+                        <input type="radio" name="sexo" id="i-sexo" value="F"> Feminino
+                    </div>
+                    <div>
+                        <label for="i-nome">Nome</label> <br>
+                        <input type="text" name="nome" id="i-nome" placeholder="Primeiro Nome" required autocomplete="name">
+                    </div>
+                    <div>
+                        <label for="i-sobrenome">Sobrenome</label> <br>
+                        <input type="text" name="sobrenome" id="i-sobrenome" required placeholder="Segundo Nome" autocomplete="nickname">
+                    </div>
+                    <div>
+                        <label for="i-nasc">Nascimento</label> <br>
+                        <input type="date" name="nascimento" id="i-nasc" required>
+                    </div>
+                    <div>
+                        <label for="i-tel">Telefone</label> <br>
+                        <input type="tel" name="telefone" id="i-tel" pattern="^[0-9]{2} [0-9]{4,5}-[0-9]{4}$" placeholder="(xx) xxxxx-xxxx" required autocomplete="tel">
+                    </div>
+                    <div>
+                        <label for="i-email">E-mail</label> <br>
+                        <input type="email" name="email" id="i-email" placeholder="exemplo123@gmail.com" required autocomplete="email">
+                    </div>
+                    <div>
+                        <label for="i-cpf">CPF</label> <br>
+                        <input type="number" name="cpf" id="i-cpf" placeholder="123.456.789-10">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="dados-endereco">
+                <fieldset class="field02">
+                    <legend>Informações de Endereço</legend>
+                    <div>
+                        <label for="i-estado">Estado</label> <br>
+                        <select name="estado" id="i-estado">
+                            <optgroup label="Região Norte">
+                                <option value="PA">Pará</option>
+                                <option value="AC">Acre</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="AM">Amazonas</option>
+                            </optgroup>
+                            <optgroup label="Região Sul" class="regioes">
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="CU">Curitiba</option>
+                            </optgroup>
+                            <optgroup label="Região Sudeste" class="regioes">
+                                <option value="SP" selected>São Paulo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="ES">Espirito Santo</option>
+                            </optgroup>
+                            <optgroup label="Região Centro-Oeste">
+                                <option value="GO">Goiás</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="DF">Distrito Federal</option>
+                            </optgroup>
+                            <optgroup label="Rregião Nordeste" class="regioes">
+                                <option value="MA">Maranhão</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="FO">Fortaleza</option>
+                                <option value="CE">Ceará</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="PI">Piauí</option>
+                                <option value="BA">Bahia</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="i-code">Código Postal</label> <br>
+                        <input type="number" name="code" id="i-code" required placeholder="12345-67" autocomplete="postal-code" pattern="[0-9]{5}-[0-9]{2}">
+                    </div>
+                    <div>
+                        <label for="i-cidade">Cidade</label> <br>
+                        <input type="text" name="cidade" id="i-cidade" required placeholder="Campo obrigatório">
+                    </div>
+                    <div>
+                        <label for="i-rua">Nome da Rua</label> <br>
+                        <input type="text" name="rua" id="i-rua" placeholder="Opcional">
+                    </div>
+                    <div>
+                        <label for="i-numcasa">Número da Casa</label> <br>
+                        <input type="number" name="numerocasa" id="i-numcasa" placeholder="Opcional">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="outros-dados">
+                <fieldset class="field03">
+                    <legend>Outros Dados</legend>
+                    <div>
+                        <label for="i-prof">Profissão</label> <br>
+                        <input type="text" name="profissao" id="i-prof" list="list" required placeholder="Campo obrigtório">
+                        <datalist id="list">
+                            <option>Professor</option>
+                            <option>Médico</option>
+                            <option>Engenheiro</option>
+                            <option>Advogado</option>
+                            <option>Programador</option>
+                            <option>Servidor Público</option>
+                            <option>Autônomo</option>
+                        </datalist>
+                    </div>
+                    <div>
+                        <label for="i-sal">Faixa Salarial</label> <br>
+                        <select name="faixa-sal" id="i-sal">
+                            <option value="faixa-sal-1000-5000">R$ 1.000 - R$ 5.000</option>
+                            <option value="faixa-sal-5000-10000">R$ 5.000 - R$ 10.000</option>
+                            <option value="faixa-sal-10000-20000">R$ 10.000 - R$ 20.000</option>
+                            <option value="faixa-sal-20000-30000">R$ 20.000 - R$ 30.000</option>
+                            <option value="faixa-sal-30000-40000">R$ 30.000 - R$ 40.000</option>
+                            <option value="faixa-sal-40000-50000">R$ 40.000 - R$ 50.000</option>
+                            <option value="faixa-sal-50000+">R$ 50.000 +</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </section>
+</body>
+</html> -->

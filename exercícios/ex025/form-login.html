@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            background-color: #000000;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        div.input-single {
+            width: 100%;
+            margin: 30px;
+            position: relative;
+        }
+
+        div.input-single label {
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            font-size: 1em;
+            color: #aca9a9;
+            cursor: text;
+            transition: 0.3s ease-in-out;
+        }
+
+        div.input-single .input {
+            padding: 0px;
+            width: 100%;
+            color: #ffffff;
+            border: 0px;
+            border-bottom: 1px solid #414040;
+            font-size: 1.1em;
+            outline: 0;
+        }
+
+        div.input-single .input:focus,
+        div.input-single .input:valid {
+            border-bottom: 1px solid #0e74e971;
+        }
+
+        div.input-single .input:focus ~ label,
+        div.input-single .input:valid ~ label {
+            transform: translateY(-23px);
+            color: #0e74e9;
+            font-size: 0.9em;
+        }
+
+        .enviar {
+            background-color: #0e74e9;
+            color: #ffffff;
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" autocomplete="off">
+        <div class="input-single">
+            <input type="text" name="nome" id="i-nome" required maxlength="30" class="input">
+            <label for="i-nome">Nome</label>
+        </div>
+        <div class="input-single">
+            <input type="text" name="sobrenome" id="i-sobrenome" required maxlength="30" class="input">
+            <label for="i-sobrenome">Sobrenome</label>
+        </div>
+
+        <div class="input-single">
+            <input type="submit" value="Enviar" class="enviar">
+        </div>
+    </form>
+</body>
+</html>
