@@ -22,7 +22,7 @@ header > h1 {
 }
 
 menu {
-    display: block;
+    display: none;
 }
 
 menu > ul {
@@ -60,4 +60,18 @@ article > p {
     text-align: justify;
     margin-bottom: 20px;
     text-indent: 20px
+}
+
+#burger {
+    display: block;
+    background-color: rgb(26, 24, 24);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#burger:hover {
+    background-color: brown;
+    color: black;
 }

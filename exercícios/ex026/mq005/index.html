@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icon" rel="stylesheet">
+    <!-- Media Query para chamada do menu -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media_queries.css">
     <title>Media Query</title>
 </head>
-<body>
+<body onresize="t">
     <header>
         <h1>Meu site</h1>
-        <i class="material-icons">menu</i>
-        <menu>
+        <i id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
+        <menu id="itensMenu">
             <ul>
                 <li><a href="#">Opção 1</a></li>
                 <li><a href="#">Opção 2</a></li>
@@ -35,5 +37,22 @@
             Repudiandae asperiores vitae dolorem soluta, molestias recusandae ipsa illo corrupti voluptas. Minima numquam voluptas eaque molestiae aperiam veniam corrupti iure repudiandae ipsam ut deleniti ipsum reprehenderit consequuntur, quos vero quas.</p>
         </article>
     </main>
+    <script>
+        function t() {
+            if (window.innerWidth >= 768) {
+                itensMenu.style.display = 'block'
+            } else {
+                itensMenu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itensMenu.style.display == 'block') {
+                itensMenu.style.display = 'none'
+            } else {
+                itensMenu.style.display = 'block'
+            }
+        }
+    </script>
 </body>
 </html>
